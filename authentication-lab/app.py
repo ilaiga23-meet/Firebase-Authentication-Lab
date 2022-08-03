@@ -21,8 +21,7 @@ db = firebase.database()
 @app.route('/add_like')
 def add_like(tweet):
     tweet['likes'] += 1
-    db.child("Users").child(login_session['user']['localId']).update('likes')
-    return render_template("all_tweets.html")
+    return tweet['likes']
     #save it to the db #
 
 @app.route('/', methods=['GET', 'POST'])
