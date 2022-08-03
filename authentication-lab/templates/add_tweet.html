@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style type="text/css">
+        #signoutbutton{
+            position: relative;
+            left: 300px;
+
+        }
+    </style>
 </head>
 <body>
     Great Job!
-    <a href="/signout"><button>signout</button></a>
+    <p>
+        <a href="/signout" id="signoutbutton"><button>signout</button></a>
+    </p>
+    <form method="post" action="/add_tweet">
+
+        <div>
+            <label> add a post: </label>
+            <div>
+                <input type="text"  name="title" id="title" placeholder="title">
+            </div>
+            <label>bio</label>
+            <div class="input-group">
+                <input type="text"  name="discription" minlength="10" maxlength="280" placeholder="discription">
+            </div>
+        </div>
+        
+        <!-- Button -->
+        <div>
+            <input type="submit"/>
+        </div>
+    </form>
 </body>
 </html>
